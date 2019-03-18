@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/parent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/wai" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:text="@string/app_name"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="@dimen/margin_btnmore"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_post"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/img_post"
+        android:layout_below="@id/parent1"
+        android:contentDescription="@string/app_name"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[5]" />
+
+    <LinearLayout
+        android:id="@+id/parent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_post"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_like"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginLeft="@dimen/margin_btnmore"
+            android:layout_marginRight="@dimen/margin_btnmore"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_more"
+            tools:srcCompat="@drawable/ic_favorite_border" />
+
+        <ImageView
+            android:id="@+id/btn_comment"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginEnd="@dimen/margin_btnmore"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_more"
+            tools:srcCompat="@drawable/ic_chat_bubble" />
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginEnd="@dimen/margin_btnmore"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_more"
+            tools:srcCompat="@drawable/ic_share_black" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_fav"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_below="@id/img_post"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_btnmore"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_more"
+        tools:srcCompat="@drawable/ic_bookmark_border" />
+
+    <TextView
+        android:id="@+id/txt_usernamecap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parent2"
+        android:layout_marginStart="@dimen/objek_jarak"
+        android:layout_marginTop="@dimen/objek_jarak"
+        android:text="@string/app_name"
+        android:textSize="@dimen/caption_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parent2"
+        android:layout_marginStart="@dimen/objek_jarak"
+        android:layout_marginTop="@dimen/objek_jarak"
+        android:layout_toEndOf="@id/txt_usernamecap"
+        android:text="@string/app_name"
+        android:textSize="@dimen/caption_size" />
+
+</RelativeLayout>
