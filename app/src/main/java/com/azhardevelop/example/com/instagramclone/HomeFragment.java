@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,9 +60,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         lvPost = view.findViewById(R.id.listPost);
-        txtUsername = view.findViewById(R.id.txt_username);
-        txtUsercap = view.findViewById(R.id.txt_usernamecap);
-        txtCaption = view.findViewById(R.id.txt_caption);
+        lvPost.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         postData = new ArrayList<HashMap<String, String>>();
         url = "https://mzdzharserver.000webhostapp.com/SMPIDN/webdatabase/api_tampilpost.php";
@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(JSONObject response) {
                 progressDialog.dismiss();
-                Toast.makeText(getActivity(), response.toString(), Toast.LENGTH_LONG).show();
+                Log.d("Log", "onResponse: " + response.toString());
                 try {
                     JSONArray jsonArray = response.getJSONArray("post");
                     for (int a = 0; a < jsonArray.length(); a++) {
@@ -86,20 +86,26 @@ public class HomeFragment extends Fragment {
                         HashMap<String, String> rowData = new HashMap<String, String>();
                         rowData.put("username", jsonObject.getString("username"));
                         rowData.put("caption", jsonObject.getString("caption"));
+                        rowData.put("waktu", jsonObject.getString("waktu"));
+                        rowData.put("p_image", jsonObject.getString("p_image"));
+                        rowData.put("id_user", jsonObject.getString("id_user"));
+                        rowData.put("id_post", jsonObject.getString("id_post"));
+                        rowData.put("gambar", jsonObject.getString("gambar"));
                         postData.add(rowData);
                     }
                     // menampilkan datanya di komponen
                     PostAdapter postAdapter = new PostAdapter(getActivity(),postData);
                     lvPost.setAdapter(postAdapter);
                 } catch (JSONException e) {
-                    e.printStackTrace();
+                    Log.d("log", "JSONException " + e.getMessage());
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
-                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
+                Log.d("log", "onErrorResponse; " + error.getMessage());
+                Toast.makeText(getActivity(), "Gagal Menampilkan data.\nCoba Lagi", Toast.LENGTH_SHORT).show();
             }
         });
 
