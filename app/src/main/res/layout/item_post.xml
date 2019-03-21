@@ -16,7 +16,7 @@
             android:layout_width="50dp"
             android:layout_height="60dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/wai" />
+            android:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/txt_username"

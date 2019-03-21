@@ -25,8 +25,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     public PostAdapter(FragmentActivity activity,
                         ArrayList<HashMap<String, String>> postdata) {
 
-        this.context = activity;
-        this.listData = postdata;
+        context = activity;
+        listData = postdata;
     }
 
     @NonNull
@@ -39,8 +39,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder postViewHolder, int i) {
         postViewHolder.txtUser.setText(listData.get(i).get("username"));
-        postViewHolder.txtUserCap.setText(listData.get(i).get("caption"));
-        String Urlgambar = "https://mzdzharserver.000webhostapp/SMPIDN/webdatabase/img";
+        postViewHolder.txtUserCap.setText(listData.get(i).get("username"));
+        postViewHolder.txtCaption.setText(listData.get(i).get("caption"));
+        String Urlgambar = "https://mzdzharserver.000webhostapp.com/SMPIDN/webdatabase/img/";
         Glide.with(context)
                 .load(Urlgambar + listData.get(i).get("gambar"))
                 .into(postViewHolder.imgPost);

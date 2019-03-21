@@ -12,8 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -30,8 +28,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,10 +42,9 @@ public class HomeFragment extends Fragment {
     private ArrayList<HashMap<String, String>> postData;
     private String url;
     private RecyclerView lvPost;
-    TextView txtUsername, txtUsercap, txtCaption;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
@@ -62,7 +57,7 @@ public class HomeFragment extends Fragment {
         lvPost = view.findViewById(R.id.listPost);
         lvPost.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        postData = new ArrayList<HashMap<String, String>>();
+        postData = new ArrayList<>();
         url = "https://mzdzharserver.000webhostapp.com/SMPIDN/webdatabase/api_tampilpost.php";
         showData();
     }
@@ -83,7 +78,7 @@ public class HomeFragment extends Fragment {
                     JSONArray jsonArray = response.getJSONArray("post");
                     for (int a = 0; a < jsonArray.length(); a++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(a);
-                        HashMap<String, String> rowData = new HashMap<String, String>();
+                        HashMap<String, String> rowData = new HashMap<>();
                         rowData.put("username", jsonObject.getString("username"));
                         rowData.put("caption", jsonObject.getString("caption"));
                         rowData.put("waktu", jsonObject.getString("waktu"));
@@ -94,7 +89,7 @@ public class HomeFragment extends Fragment {
                         postData.add(rowData);
                     }
                     // menampilkan datanya di komponen
-                    PostAdapter postAdapter = new PostAdapter(getActivity(),postData);
+                    PostAdapter postAdapter = new PostAdapter(getActivity(), postData);
                     lvPost.setAdapter(postAdapter);
                 } catch (JSONException e) {
                     Log.d("log", "JSONException " + e.getMessage());
@@ -105,7 +100,7 @@ public class HomeFragment extends Fragment {
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
                 Log.d("log", "onErrorResponse; " + error.getMessage());
-                Toast.makeText(getActivity(), "Gagal Menampilkan data.\nCoba Lagi", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Gagal Menampilkan data.\n Coba Lagi", Toast.LENGTH_SHORT).show();
             }
         });
 
