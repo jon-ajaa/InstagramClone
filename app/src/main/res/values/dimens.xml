@@ -11,7 +11,7 @@
     <dimen name="profile_meta_label">10dp</dimen>
     <dimen name="size_pp">70dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="img_post">400dp</dimen>
+    <dimen name="img_post">320dp</dimen>
     <dimen name="icon_size">40dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="margin_btnmore">5dp</dimen>

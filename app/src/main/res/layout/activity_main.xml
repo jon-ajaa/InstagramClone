@@ -17,6 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
         android:background="?android:attr/windowBackground"
         android:foreground="?attr/selectableItemBackground"
         app:menu="@menu/navigation" />
