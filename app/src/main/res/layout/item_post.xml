@@ -62,26 +62,21 @@
             android:layout_marginLeft="@dimen/margin_btnmore"
             android:layout_marginRight="@dimen/margin_btnmore"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_more"
-            tools:srcCompat="@drawable/ic_favorite_border" />
-
+            android:src="@drawable/ic_favorite_border"/>
         <ImageView
             android:id="@+id/btn_comment"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
             android:layout_marginEnd="@dimen/margin_btnmore"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_more"
-            tools:srcCompat="@drawable/ic_chat_bubble" />
-
+            android:src="@drawable/ic_chat_bubble"/>
         <ImageView
             android:id="@+id/btn_share"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
             android:layout_marginEnd="@dimen/margin_btnmore"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_more"
-            tools:srcCompat="@drawable/ic_share_black" />
+            android:src="@drawable/ic_share_black"/>
     </LinearLayout>
 
     <ImageView
@@ -92,9 +87,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/margin_btnmore"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_more"
-        tools:srcCompat="@drawable/ic_bookmark_border" />
-
+        android:src="@drawable/ic_bookmark_border"/>
     <TextView
         android:id="@+id/txt_usernamecap"
         android:layout_width="wrap_content"
