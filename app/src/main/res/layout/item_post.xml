@@ -108,7 +108,7 @@
         android:layout_marginStart="@dimen/objek_jarak"
         android:layout_marginTop="@dimen/objek_jarak"
         android:layout_toEndOf="@id/txt_usernamecap"
-        android:text="@string/app_name"
+        android:text="Ashiaap"
         android:textSize="@dimen/caption_size" />
 
 </RelativeLayout>
