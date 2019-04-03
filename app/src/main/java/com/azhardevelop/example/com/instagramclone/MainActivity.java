@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void loadFragment(Fragment fragment) {
+    public void loadFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.frame_container, fragment)
