@@ -24,7 +24,7 @@
                     android:layout_height="100dp"
                     android:src="@drawable/person"
                     app:civ_border_color="#000"
-                    app:civ_border_width="1dp" />
+                    app:civ_border_width="1dp"/>
 
                 <TextView
                     android:layout_gravity="center"
@@ -91,6 +91,12 @@
                     android:layout_marginTop="12dp"
                     android:text="Sign Up" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text="By Signing Up, you agree to our \n Terms and Privacy Plocy"/>
                 <LinearLayout
                     android:id="@+id/parent2"
                     android:layout_width="300dp"
