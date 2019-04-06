@@ -36,6 +36,7 @@
                     app:boxBackgroundMode="outline">
 
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edMailReg2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Mobile Number Or E-Mail" />
@@ -50,6 +51,7 @@
                     app:boxBackgroundMode="outline">
 
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edUserReg2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Username" />
@@ -66,6 +68,7 @@
                     app:passwordToggleEnabled="true">
 
                     <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edPwReg2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Password"

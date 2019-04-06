@@ -27,6 +27,7 @@
             android:layout_height="match_parent">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/edUser1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Username"/>
@@ -43,6 +44,7 @@
             app:passwordToggleEnabled="true">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/edPw2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Password"
