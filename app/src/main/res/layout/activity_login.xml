@@ -52,7 +52,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnLogin1"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
             style="@style/AppTheme.Button"
