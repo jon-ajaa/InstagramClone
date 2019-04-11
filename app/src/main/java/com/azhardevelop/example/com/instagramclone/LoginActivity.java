@@ -64,9 +64,9 @@ public class LoginActivity extends AppCompatActivity {
             txtPassw.setError("Password harus di Isi");
             txtPassw.requestFocus();
         }else{
-            String URL = "https://mzdzharserver.000webhostapp.com/SMPIDN/webdatabase/api_simpandataregister.php";
+            String URL = "https://mzdzharserver.000webhostapp.com/SMPIDN/webdatabase/loginigclone.php";
             ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-            progressDialog.setTitle("Menyimpan Data...");
+            progressDialog.setTitle("Memeriksa Data...");
             progressDialog.setMessage("Tunggu Sebentar...");
             progressDialog.show();
 
@@ -80,8 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                                 String pesan = jsonObject.getString("pesan");
                                 if (hasil.equalsIgnoreCase("true")){
                                     Toast.makeText(LoginActivity.this, pesan, Toast.LENGTH_LONG).show();
-                                    startActivity(new Intent(LoginActivity.this, LoginActivity.class));
-                                    finish();
+                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                 }else {
                                     Toast.makeText(LoginActivity.this, pesan, Toast.LENGTH_SHORT).show();
                                 }
