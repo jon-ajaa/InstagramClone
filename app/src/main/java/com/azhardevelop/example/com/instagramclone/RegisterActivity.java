@@ -63,9 +63,6 @@ public class RegisterActivity extends AppCompatActivity {
     private Uri fileUri;
     public final int REQUEST_CAMERA = 0;
     public final int SELECT_FILE = 1;
-    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 100;
-    public static final String ALLOW_KEY = "ALLOWED";
-    public static final String CAMERA_PREF = "camera_pref";
 
     int bitmap_size = 60; // image quality 1 - 100;
     int max_resolution_image = 800;

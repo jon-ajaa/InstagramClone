@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -44,7 +45,8 @@ public class AddFragment extends Fragment {
         // Required empty public constructor
     }
 
-    TextInputEditText inGambar, inCaption, inUser;
+    TextInputEditText inCaption, inUser;
+    ImageView inGambar;
     Button btnSimpan;
 
 
@@ -59,7 +61,7 @@ public class AddFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         inCaption = view.findViewById(R.id.inncaptions);
-        inGambar = view.findViewById(R.id.ingambar);
+        inGambar = view.findViewById(R.id.inGambar);
         inUser = view.findViewById(R.id.inusers);
         btnSimpan = view.findViewById(R.id.btnsimpan);
 
@@ -74,10 +76,7 @@ public class AddFragment extends Fragment {
     }
 
     private void insertData() {
-        if (TextUtils.isEmpty(inGambar.getText().toString())){
-            inGambar.setError("Gambar harus di Isi");
-            inGambar.requestFocus();
-        }else if (TextUtils.isEmpty(inUser.getText().toString())){
+        if (TextUtils.isEmpty(inUser.getText().toString())){
             inUser.setError("Nama User harus di Isi");
             inUser.requestFocus();
         }else{
