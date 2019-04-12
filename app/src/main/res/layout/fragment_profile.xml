@@ -9,107 +9,119 @@
         android:id="@+id/parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_launcher_background" />
-
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/lid"
-            android:layout_width="wrap_content"
+            android:id="@+id/parent2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="3dp"
-            android:orientation="vertical">
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txt_numOFpost"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_launcher_background" />
+
+
+            <LinearLayout
+                android:id="@+id/lid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="20"
-                android:textColor="#000"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:id="@+id/txt_numOFpost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="20"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Posts"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lid2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Posts"
-                android:textAlignment="center" />
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/txt_numOFfollowers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="900"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Followers"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lid3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_numOFfollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="120"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Following"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lid2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txt_numOFfollowers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="900"
-                android:textColor="#000"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Followers"
-                android:textAlignment="center" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lid3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="3dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txt_numOFfollowing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="120"
-                android:textColor="#000"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Following"
-                android:textAlignment="center" />
-
-        </LinearLayout>
-
-
+        <Button
+            android:layout_gravity="right"
+            android:layout_marginRight="32dp"
+            android:layout_width="250dp"
+            android:textAllCaps="false"
+            android:text="Edit Profile"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/parent2"
+        android:id="@+id/parent3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/parent"
         android:layout_marginTop="12dp"
+        android:layout_below="@id/parent"
         android:orientation="vertical">
 
         <TextView
@@ -130,10 +142,12 @@
             android:text="Write your Desc Here" />
     </LinearLayout>
 
+
+
     <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/parent2"
+        android:layout_below="@id/parent3"
         android:columnWidth="100dp"
         android:gravity="center"
         android:horizontalSpacing="8dp"

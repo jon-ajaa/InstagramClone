@@ -10,6 +10,16 @@
         android:id="@+id/inGambar"
         android:layout_width="match_parent"
         android:layout_height="210dp"
+        android:layout_margin="3dp"
+        tools:src="@tools:sample/backgrounds/scenic[5]" />
+
+    <TextView
+        android:id="@+id/txtPloadPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Photos"
+        android:textColor="@color/Blue"
+        android:textAlignment="center"
         android:layout_margin="3dp"/>
 
     <android.support.design.widget.TextInputLayout
