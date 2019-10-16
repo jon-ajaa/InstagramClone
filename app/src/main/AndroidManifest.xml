@@ -21,6 +21,8 @@
         android:appComponentFactory="whateverString">
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RegisterActivity"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
