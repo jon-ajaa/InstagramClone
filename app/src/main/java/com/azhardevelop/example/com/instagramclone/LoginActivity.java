@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         txtUser = findViewById(R.id.edUser1);
         txtPassw = findViewById(R.id.edPw2);
 
